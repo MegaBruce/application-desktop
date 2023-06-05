@@ -1,9 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Fenetre extends JFrame {
-    public Fenetre (){
-        super("Une fenêtre");
+public class Window extends JFrame {
+    public Window(){
+        super("A window");
         setBounds(0,0, 300, 200);
         /* OU :
         setLocation(); setSize()
@@ -17,16 +17,12 @@ public class Fenetre extends JFrame {
         setLocationRelativeTo(null);
 
         Toolkit tk = Toolkit.getDefaultToolkit();
-        /* Méthodes utiles : getScreenSize, getScreenResolution,
-        getDefaultToolkit, beep, getImage,
-        createImage, getSystemEventQueue
-        */
         tk.beep();
 
         setVisible(true);
     }
 
     public static void main(String[] args) {
-        JFrame fenetre = new Fenetre();
+        JFrame window = new Window();
     }
 }
