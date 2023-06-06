@@ -16,17 +16,23 @@ public class Fenetre extends JFrame {
         // Centre une fenetre
         setLocationRelativeTo(null);
 
-        Toolkit tk = Toolkit.getDefaultToolkit();
+        //Toolkit tk = Toolkit.getDefaultToolkit();
         /* Méthodes utiles : getScreenSize, getScreenResolution,
         getDefaultToolkit, beep, getImage,
         createImage, getSystemEventQueue
         */
-        tk.beep();
+        // tk.beep();
+
+        Container cp = this.getContentPane();
+        JLabel label = new JLabel("Bonjour");
+        JButton b1 = new JButton("Cliquez moi !");
+        cp.add(label, BorderLayout.NORTH);
+        cp.add(b1, BorderLayout.SOUTH);
 
         setVisible(true);
     }
 
     public static void main(String[] args) {
-        JFrame fenetre = new Fenetre();
+        JFrame frame = new Fenetre();
     }
 }
