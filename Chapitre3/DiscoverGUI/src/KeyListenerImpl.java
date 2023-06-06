@@ -1,20 +1,20 @@
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class EcouteCaracteres extends KeyAdapter {
+public class KeyListenerImpl extends KeyAdapter {
     public void keyTyped(KeyEvent e) {
         if (e.getKeyChar() == 'q')
-            quitter();
+            cancel();
     }
 
     public void keyReleased(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE)
-            actionQuandEsc();
+            doWhenEsc();
     }
 
-    private void actionQuandEsc() {
+    private void doWhenEsc() {
     }
 
-    private void quitter() {
+    private void cancel() {
     }
 }

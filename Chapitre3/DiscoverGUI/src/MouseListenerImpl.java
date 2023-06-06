@@ -4,15 +4,18 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 
-class EcouteurBouton extends MouseAdapter {
+class MouseListenerImpl extends MouseAdapter {
     public void mousePressed(MouseEvent e) {
         ((JButton)e.getSource()).setText("Appuyé");
+
         // Tester si la touche Ctrl était appuyée :
         boolean b = (e.getModifiers() & InputEvent.CTRL_MASK) != 0;
         // ou
         b = e.isControlDown();
+
         // Tester si l’une des touches Ctrl ou Shift était appuyée :
         b = (e.getModifiers() & (InputEvent.SHIFT_MASK | InputEvent.CTRL_MASK)) != 0;
+
         //Tester si les 2 touches Ctrl ou Shift étaient
         //appuyées, mais pas la touche Meta (il faudrait
         //beaucoup de doigts !) :
