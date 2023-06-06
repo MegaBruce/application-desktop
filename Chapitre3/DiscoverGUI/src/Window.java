@@ -1,8 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Fenetre extends JFrame {
-    public Fenetre (){
+public class Window extends JFrame {
+    public Window(){
         super("Une fenêtre");
         setBounds(0,0, 300, 200);
         /* OU :
@@ -16,17 +16,28 @@ public class Fenetre extends JFrame {
         // Centre une fenetre
         setLocationRelativeTo(null);
 
-        Toolkit tk = Toolkit.getDefaultToolkit();
+        //Toolkit tk = Toolkit.getDefaultToolkit();
         /* Méthodes utiles : getScreenSize, getScreenResolution,
         getDefaultToolkit, beep, getImage,
         createImage, getSystemEventQueue
         */
-        tk.beep();
+        // tk.beep();
+
+        //On créé le container (ou JPannel)
+        Container cp = this.getContentPane();
+
+        //On créé les composants légers
+        JLabel label = new JLabel("Bonjour");
+        JButton b1 = new JButton("Cliquez moi !");
+
+        //On ajoute les composants légers au container
+        cp.add(label, BorderLayout.NORTH);
+        cp.add(b1, BorderLayout.SOUTH);
 
         setVisible(true);
     }
 
     public static void main(String[] args) {
-        JFrame fenetre = new Fenetre();
+        JFrame frame = new Window();
     }
 }
