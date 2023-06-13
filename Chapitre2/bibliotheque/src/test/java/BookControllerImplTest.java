@@ -37,6 +37,7 @@ public class BookControllerImplTest {
 
     @BeforeEach
     public void setUp () {
+
         classUnderTest = new BookControllerImpl(bookRepository);
     }
 
@@ -44,6 +45,7 @@ public class BookControllerImplTest {
     @Test
     @DisplayName("Test an action")
     public void voidAction_isTested_shouldFail () {
+
         fail("Not yet implemented");
     }
 
@@ -59,9 +61,9 @@ public class BookControllerImplTest {
         //Assert
         verify(bookRepository).save(christineBook);
         verify(bookRepository).save(any(Book.class));
-        verify(bookRepository, times(1)).save(any(Book.class));
+        verify(bookRepository, times(1))
+                .save(any(Book.class));
         verify(bookRepository, never()).getAll();
         assertThat(result).isEqualTo(id);
     }
-
 }

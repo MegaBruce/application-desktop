@@ -16,7 +16,7 @@ public class Bibliotheque {
     private static final Logger logger = LoggerFactory.getLogger(Bibliotheque.class);
 
     public static void main(String[] args) {
-        String connectionString = "mongodb+srv://appdesktop:appdesktop@cluster0.f5h29w4.mongodb.net/?retryWrites=true&w=majority";
+        String connectionString = "mongodb+srv://app-de-test:app-de-test@cluster0.jg9rphv.mongodb.net/?retryWrites=true&w=majority";
         try (MongoClient mongoClient = MongoClients.create(connectionString)) {
             logger.info("Database connection successful");
             MongoDatabase database = mongoClient.getDatabase("myBibliotheque");

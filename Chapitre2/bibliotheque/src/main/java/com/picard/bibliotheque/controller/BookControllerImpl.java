@@ -6,6 +6,7 @@ import com.picard.bibliotheque.repository.BookRepository;
 public class BookControllerImpl implements BookController{
     BookRepository bookRepository;
     public BookControllerImpl(BookRepository bookRepository){
+
         this.bookRepository = bookRepository;
     }
     @Override
