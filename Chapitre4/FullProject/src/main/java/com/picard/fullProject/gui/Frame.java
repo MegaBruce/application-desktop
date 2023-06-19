@@ -13,7 +13,13 @@ public class Frame extends JFrame {
         setBounds(0, 0, 600, 200);
 
         Container c = this.getContentPane();
-        JList list = new JList(new String[]{"One", "Two", "Three", "Four"});
+        DefaultListModel pays = new DefaultListModel();
+        pays.addElement("France");
+        pays.addElement("Italie");
+        pays.addElement("Espagne");
+        pays.addElement("Maroc");
+
+        JList list = new JList(pays);
         JScrollPane sList = new JScrollPane(list);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
