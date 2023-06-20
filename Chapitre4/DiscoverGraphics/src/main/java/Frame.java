@@ -9,7 +9,7 @@ public class Frame extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
 
-        add(new HelloWorldComponent());
+        add(new ColorAndFontComponent());
     }
 
     public static void main(String[] args) {
